@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/.github.io/pompeii-time-out/static/css/main.d8823652.css",
+    "main.js": "/.github.io/pompeii-time-out/static/js/main.2698e0d7.js",
+    "static/js/453.a0490bbd.chunk.js": "/.github.io/pompeii-time-out/static/js/453.a0490bbd.chunk.js",
+    "index.html": "/.github.io/pompeii-time-out/index.html",
+    "main.d8823652.css.map": "/.github.io/pompeii-time-out/static/css/main.d8823652.css.map",
+    "main.2698e0d7.js.map": "/.github.io/pompeii-time-out/static/js/main.2698e0d7.js.map",
+    "453.a0490bbd.chunk.js.map": "/.github.io/pompeii-time-out/static/js/453.a0490bbd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8823652.css",
+    "static/js/main.2698e0d7.js"
+  ]
+}
