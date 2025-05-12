@@ -1,0 +1,154 @@
+.game-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+}
+
+.console-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    height: 80vh;
+}
+
+.console {
+    flex: 1;
+    background-color: #000;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.past-console {
+    border: 2px solid #8b0000;
+}
+
+.present-console {
+    border: 2px solid #006400;
+}
+
+.console h2 {
+    color: #fff;
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+.past-console h2 {
+    color: #ff6b6b;
+}
+
+.present-console h2 {
+    color: #4caf50;
+}
+
+.console-output {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #fff;
+}
+
+.console-line {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.console form {
+    display: flex;
+    gap: 10px;
+}
+
+.console input {
+    flex: 1;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+}
+
+.console input:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.past-console input {
+    border-color: #8b0000;
+}
+
+.present-console input {
+    border-color: #006400;
+}
+
+/* Scrollbar styling */
+.console-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+.console-output::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.console-output::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.console-output::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.commands-panel {
+    width: 250px;
+    background-color: #000;
+    border-radius: 8px;
+    padding: 20px;
+    border: 2px solid #666;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+}
+
+.commands-panel h3 {
+    color: #fff;
+    margin: 0 0 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.command-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.command-list li {
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.command-list .command {
+    color: #4caf50;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.command-list .description {
+    color: #888;
+    font-size: 0.9em;
+} 
