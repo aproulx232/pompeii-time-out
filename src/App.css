@@ -4,6 +4,8 @@
   height: 100vh;
   background-color: #1a1a1a;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -45,4 +47,25 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+.game-header {
+  padding: 1rem 0;
+  color: #f5d393;
+  background-color: #2a1a0a;
+  border-bottom: 2px solid #8b4513;
+}
+
+.game-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game-tagline {
+  margin: 0.5rem 0 0;
+  font-style: italic;
+  font-size: 1rem;
+  color: #d3b17d;
 }
