@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pompeii-time-out/static/css/main.d8823652.css",
-    "main.js": "/pompeii-time-out/static/js/main.eae970d5.js",
+    "main.css": "/pompeii-time-out/static/css/main.6df0a928.css",
+    "main.js": "/pompeii-time-out/static/js/main.27aab7f2.js",
     "static/js/453.a0490bbd.chunk.js": "/pompeii-time-out/static/js/453.a0490bbd.chunk.js",
     "index.html": "/pompeii-time-out/index.html",
-    "main.d8823652.css.map": "/pompeii-time-out/static/css/main.d8823652.css.map",
-    "main.eae970d5.js.map": "/pompeii-time-out/static/js/main.eae970d5.js.map",
+    "main.6df0a928.css.map": "/pompeii-time-out/static/css/main.6df0a928.css.map",
+    "main.27aab7f2.js.map": "/pompeii-time-out/static/js/main.27aab7f2.js.map",
     "453.a0490bbd.chunk.js.map": "/pompeii-time-out/static/js/453.a0490bbd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8823652.css",
-    "static/js/main.eae970d5.js"
+    "static/css/main.6df0a928.css",
+    "static/js/main.27aab7f2.js"
   ]
 }
