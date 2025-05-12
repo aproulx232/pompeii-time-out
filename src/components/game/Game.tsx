@@ -8,6 +8,7 @@ interface GameState {
     inventory: string[];
     hasDiscoveredAncientConsole: boolean;
     hasOpenedVase: boolean;
+    timePortalActive: boolean;
 }
 
 const commands = [
@@ -62,7 +63,8 @@ const Game: React.FC = () => {
         currentLocation: 'main_square',
         inventory: [],
         hasDiscoveredAncientConsole: false,
-        hasOpenedVase: false
+        hasOpenedVase: false,
+        timePortalActive: false
     });
 
     const [input, setInput] = useState('');
@@ -133,12 +135,14 @@ const Game: React.FC = () => {
             if (isVaseCommand(item) && newState.inventory.includes('ancient_vase') && !newState.hasOpenedVase) {
                 newState.hasOpenedVase = true;
                 newState.hasDiscoveredAncientConsole = true;
+                newState.timePortalActive = true;
                 newState.pastConsole = [
                     'As you open the ancient vase, a strange sensation washes over you...',
                     'Suddenly, you find yourself connected to the consciousness of Marcus, a citizen of ancient Pompeii.',
                     'Through this mystical connection, you can now perceive both time periods simultaneously.',
                     'Marcus is unaware of your presence, but you can see through his eyes and experience his world.',
-                    'Type "look" to see what Marcus sees in ancient Pompeii.'
+                    'Type "look" to see what Marcus sees in ancient Pompeii.',
+                    'You now share an inventory with Marcus - items you collect in either time period can be used in both.'
                 ];
                 console.push(`> ${command}`);
                 console.push('As you open the vase, a brilliant light emanates from within. You feel a strange connection forming...');
@@ -154,7 +158,17 @@ const Game: React.FC = () => {
             }
         } else if (cmd === 'inventory') {
             console.push(`> ${command}`);
-            console.push('Your inventory: ' + (newState.inventory.length ? newState.inventory.join(', ') : 'empty'));
+            const inventoryList = newState.inventory.length ? newState.inventory.join(', ') : 'empty';
+            
+            if (timePeriod === 'past') {
+                console.push(`Marcus is carrying: ${inventoryList}`);
+            } else {
+                console.push(`Your inventory: ${inventoryList}`);
+            }
+            
+            if (newState.timePortalActive) {
+                console.push("(Items in your inventory are accessible in both time periods)");
+            }
         } else if (cmd.startsWith('go')) {
             const direction = cmd.split(' ')[1];
             console.push(`> ${command}`);
@@ -237,4 +251,4 @@ const Game: React.FC = () => {
     );
 };
 
-export default Game; 
+export default Game;
